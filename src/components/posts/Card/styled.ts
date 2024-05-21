@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { colors } from "@/styles/colors";
 
+type CardBoxProps = {
+  variant: "odd" | "even";
+};
 export const CardBox = styled.div<CardBoxProps>((props) => ({
   width: "100%",
   background: props.variant === "odd" ? colors.white : colors.blue,
@@ -45,10 +48,6 @@ export const BottomSection = styled.div(() => ({
   gap: 16,
   padding: "16px",
 }));
-
-type CardBoxProps = {
-  variant: "odd" | "even";
-};
 
 export const PostImage = styled.img(() => ({
   width: 240,
